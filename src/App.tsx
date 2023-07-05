@@ -1,12 +1,9 @@
 import { useState } from 'react';
 
 import reactLogo from 'src/assets/react.svg';
-
-import viteLogo from '/vite.svg';
+import Header from 'src/components/Header';
 
 import 'src/App.css';
-
-import Header from 'src/components/Header';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,9 +12,7 @@ function App() {
     <>
       <div>
         <Header />
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
+        <a href="https://vitejs.dev" target="_blank"></a>
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
