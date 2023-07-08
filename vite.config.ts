@@ -6,8 +6,8 @@ import { join } from 'path'
 export default defineConfig({
   plugins: [react()],
   resolve: {
-      alias: {
-        src: join(__dirname, 'src'),
-      },
+    alias: {
+      src: join(__dirname, 'src'),
     },
+  },
 })
