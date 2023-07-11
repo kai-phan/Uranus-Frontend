@@ -1,0 +1,64 @@
+{
+  "root": true,
+  "env": {
+      "browser": true,
+      "node": true
+  },
+  "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+      "tsconfigRootDir": "./",
+      "project": ["./tsconfig.json"],
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "modules": true,
+          "jsx": true
+      }
+  },
+  "ignorePatterns": ["vite.config.ts","postcss.config.cjs", "tailwind.config.cjs", "**/*.js"],
+  "plugins": ["@typescript-eslint", "prettier"],
+  "settings": {
+      "import/resolver": {
+          "alias": {
+              "map": [["src", "./src"]],
+              "extensions": [".ts", "tsx", ".js", ".jsx"]
+          }
+      }
+  },
+  "rules": {
+      "prettier/prettier": "error",
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+              "vars" : "all",
+              "args": "none"
+          }
+      ],
+      "@typescript-eslint/no-var-requires": "warn",
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/no-unsafe-argument": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unsafe-return": "off",
+      "@typescript-eslint/no-empty-interface": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/unbound-method": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/no-misused-promises": "off",
+      "@typescript-eslint/restrict-template-expressions": "off",
+      "@typescript-eslint/no-unsafe-call": "off",
+      "@typescript-eslint/no-floating-promises": "off",
+      "@typescript-eslint/no-non-null-asserted-optional-chain": "off"
+  },
+  "globals": {
+      "SearchParams": "readonly",
+      "Model": "readonly",
+      "global": "readonly"
+  }
+}
