@@ -12,6 +12,7 @@ const Play = () => {
       viewBox="0 0 47 47"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="animate-wiggle"
     >
       <path
         fillRule="evenodd"
@@ -25,7 +26,7 @@ const Play = () => {
 
 function App() {
   return (
-    <React.Fragment>
+    <section className="bg-[url('/src/assets/img.png')]">
       <Play />
       <div className="grid grid-cols-4 phone:grid-cols-1 gap-6">
         <div className="w-20 h-20 bg-primary-1"></div>
@@ -52,7 +53,7 @@ function App() {
       </div>
 
       <Input label="Name" placeholder={'adfadsf'} />
-    </React.Fragment>
+    </section>
   );
 }
 
