@@ -1,53 +1,363 @@
-import { Button } from './components/common';
+import avatarImg from 'src/assets/avatar.png';
+import coverImg from 'src/assets/cover-img.png';
+import slideImg from 'src/assets/slide.png';
+import { Button } from 'src/components/common';
+import CompanyReviews from 'src/components/CompanyReviews';
+import Header from 'src/components/Header';
+import {
+  ArrowLeft,
+  ArrowRight,
+  Dribbble,
+  Instagram,
+  Linkedin,
+} from 'src/components/icons';
 
 function App() {
   return (
     <div>
-      <div className="flex gap-2 mt-2 ml-2">
-        <div>
-          <Button variant="primary">small</Button>
+      <Header />
+
+      <div className="px-9 py-16 container m-auto">
+        <div className="grid grid-cols-4 gap-4">
+          <div className="desktop:col-span-2 col-span-4">
+            <img src={coverImg} alt="cover" className="rounded-md" />
+          </div>
+          <div className="desktop:col-span-2 desktop:p-24 col-span-4 flex flex-col justify-center gap-5">
+            <p className="text-text-color-1 text-6xl font-bold leading-[73px]">
+              A team that creates amazing products
+            </p>
+            <p className="text-text-color-3 text-xl leading-9">
+              Get to know our team members better. Find out what we do and how
+              we want to make the world a better place.
+            </p>
+
+            <a href="#" className="flex items-center">
+              <p className="text-primary-1">Meet the crew</p>
+              <ArrowRight
+                width="14px"
+                height="14px"
+                classNames="[&_path]:fill-primary-1 text-sm ml-2"
+              />
+            </a>
+          </div>
         </div>
-        <div>
-          <Button>small</Button>
+      </div>
+
+      <div className="bg-[#f5f6fa]">
+        <div className="px-9 py-16 container m-auto">
+          <div className="flex flex-col items-center desktop:px-[90px] gap-5">
+            <p className="text-text-color-1 text-6xl font-bold leading-[73px]">
+              What we’re about
+            </p>
+            <p className="text-text-color-3 text-xl leading-9">
+              View our weekdays at the office! We work hard every day to create
+              great products that will help you in your work.
+            </p>
+            <div className="mt-4 relative">
+              <img src={slideImg} alt="" className="rounded-md" />
+              <div className="absolute inset-0">
+                <div className="h-5/6 relative">
+                  <button className="absolute bg-white rounded-full p-3.5 -translate-y-2/4 top-2/4 left-[-20px] hover:opacity-90">
+                    <ArrowLeft
+                      width="18px"
+                      height="18px"
+                      classNames="[&_path]:fill-primary-1"
+                    />
+                  </button>
+                  <button className="absolute bg-white rounded-full p-3.5 -translate-y-2/4 top-2/4 right-[-20px] hover:opacity-90">
+                    <ArrowRight
+                      width="18px"
+                      height="18px"
+                      classNames="[&_path]:fill-primary-1"
+                    />
+                  </button>
+                </div>
+                <div className="bg-white opacity-90 h-1/6" />
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <Button variant="secondary" size="medium">
-            medium
+      </div>
+
+      <div className="px-9 py-16 container m-auto">
+        <div className="flex flex-col items-center desktop:px-[90px] gap-5">
+          <p className="text-text-color-1 text-6xl font-bold leading-[73px]">
+            Our team member
+          </p>
+          <p className="text-text-color-3 text-xl leading-9">
+            These are the people who work every day to create great products
+            that will help you in your work.
+          </p>
+          <div className="w-full">
+            <div className="grid grid-cols-6 gap-4">
+              <div className="desktop:col-span-2 tablet:col-span-3 col-span-6 py-8">
+                <div className="flex flex-col items-center gap-2.5">
+                  <img src={avatarImg} alt="" className="w-[180px]" />
+                  <p className="text-text-color-1 text-xl leading-6 font-semibold">
+                    Bogdan Krivenchenko
+                  </p>
+                  <p className="text-text-color-3 text-lg leading-5">
+                    Co-Founder & CEO
+                  </p>
+                  <div className="flex gap-5 mt-2">
+                    <a href="#">
+                      <Instagram />
+                    </a>
+                    <a href="#">
+                      <Dribbble />
+                    </a>
+                    <a href="#">
+                      <Linkedin />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="desktop:col-span-2 tablet:col-span-3 col-span-6 py-8">
+                <div className="flex flex-col items-center gap-2.5">
+                  <img src={avatarImg} alt="" className="w-[180px]" />
+                  <p className="text-text-color-1 text-xl leading-6 font-semibold">
+                    Bogdan Krivenchenko
+                  </p>
+                  <p className="text-text-color-3 text-lg leading-5">
+                    Co-Founder & CEO
+                  </p>
+                  <div className="flex gap-5 mt-2">
+                    <a href="#">
+                      <Instagram />
+                    </a>
+                    <a href="#">
+                      <Dribbble />
+                    </a>
+                    <a href="#">
+                      <Linkedin />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="desktop:col-span-2 tablet:col-span-3 col-span-6 py-8">
+                <div className="flex flex-col items-center gap-2.5">
+                  <img src={avatarImg} alt="" className="w-[180px]" />
+                  <p className="text-text-color-1 text-xl leading-6 font-semibold">
+                    Bogdan Krivenchenko
+                  </p>
+                  <p className="text-text-color-3 text-lg leading-5">
+                    Co-Founder & CEO
+                  </p>
+                  <div className="flex gap-5 mt-2">
+                    <a href="#">
+                      <Instagram />
+                    </a>
+                    <a href="#">
+                      <Dribbble />
+                    </a>
+                    <a href="#">
+                      <Linkedin />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="desktop:col-span-2 tablet:col-span-3 col-span-6 py-8">
+                <div className="flex flex-col items-center gap-2.5">
+                  <img src={avatarImg} alt="" className="w-[180px]" />
+                  <p className="text-text-color-1 text-xl leading-6 font-semibold">
+                    Bogdan Krivenchenko
+                  </p>
+                  <p className="text-text-color-3 text-lg leading-5">
+                    Co-Founder & CEO
+                  </p>
+                  <div className="flex gap-5 mt-2">
+                    <a href="#">
+                      <Instagram />
+                    </a>
+                    <a href="#">
+                      <Dribbble />
+                    </a>
+                    <a href="#">
+                      <Linkedin />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="desktop:col-span-2 tablet:col-span-3 col-span-6 py-8">
+                <div className="flex flex-col items-center gap-2.5">
+                  <img src={avatarImg} alt="" className="w-[180px]" />
+                  <p className="text-text-color-1 text-xl leading-6 font-semibold">
+                    Bogdan Krivenchenko
+                  </p>
+                  <p className="text-text-color-3 text-lg leading-5">
+                    Co-Founder & CEO
+                  </p>
+                  <div className="flex gap-5 mt-2">
+                    <a href="#">
+                      <Instagram />
+                    </a>
+                    <a href="#">
+                      <Dribbble />
+                    </a>
+                    <a href="#">
+                      <Linkedin />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="desktop:col-span-2 tablet:col-span-3 col-span-6 py-8">
+                <div className="flex flex-col items-center gap-2.5">
+                  <img src={avatarImg} alt="" className="w-[180px]" />
+                  <p className="text-text-color-1 text-xl leading-6 font-semibold">
+                    Bogdan Krivenchenko
+                  </p>
+                  <p className="text-text-color-3 text-lg leading-5">
+                    Co-Founder & CEO
+                  </p>
+                  <div className="flex gap-5 mt-2">
+                    <a href="#">
+                      <Instagram />
+                    </a>
+                    <a href="#">
+                      <Dribbble />
+                    </a>
+                    <a href="#">
+                      <Linkedin />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Button variant="secondary">
+            We think you'll fit in here. Submit your resume
           </Button>
         </div>
-        <div>
-          <Button
-            startIcon={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 384 512"
-                height="1em"
-                width="1em"
-              >
-                <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
-              </svg>
-            }
-            variant="secondary"
-          >
-            small
-          </Button>
-        </div>
-        <div>
-          <Button icon variant="secondary">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 384 512"
-              height="1em"
-              width="1em"
+      </div>
+
+      <CompanyReviews />
+
+      <footer className="px-9 py-16 container m-auto">
+        <div className="grid grid-cols-6 gap-4">
+          <div className="desktop:col-span-2 col-span-6 flex flex-col gap-5">
+            <p className="text-text-color-1 text-4xl font-bold">Move</p>
+            <p className="text-text-color-3 text-xl leading-9 w-[280px]">
+              Move - Multipurpose Design Template will help you develop your
+              website design.
+            </p>
+            <div className="flex gap-5 mt-2">
+              <a href="#" className="p-2 bg-[#F5F6FA] rounded-md">
+                <Instagram classNames="[&_path]:fill-text-color-3" />
+              </a>
+              <a href="#" className="p-2 bg-[#F5F6FA] rounded-md">
+                <Dribbble classNames="[&_path]:fill-text-color-3" />
+              </a>
+              <a href="#" className="p-2 bg-[#F5F6FA] rounded-md">
+                <Linkedin classNames="[&_path]:fill-text-color-3" />
+              </a>
+              <a href="#" className="p-2 bg-[#F5F6FA] rounded-md">
+                <Linkedin classNames="[&_path]:fill-text-color-3" />
+              </a>
+            </div>
+          </div>
+          <div className="desktop:col-span-1 tablet:col-span-3 col-span-6 flex flex-col">
+            <p className="text-text-color-1 text-2xl font-bold">Home</p>
+            <a
+              href="#"
+              className="text-text-color-3 text-xl leading-9 w-[280px]"
             >
-              <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
-            </svg>
-          </Button>
+              Desktop App
+            </a>
+            <a
+              href="#"
+              className="text-text-color-3 text-xl leading-9 w-[280px]"
+            >
+              Mobile App
+            </a>
+            <a
+              href="#"
+              className="text-text-color-3 text-xl leading-9 w-[280px]"
+            >
+              SaaS
+            </a>
+            <a
+              href="#"
+              className="text-text-color-3 text-xl leading-9 w-[280px]"
+            >
+              Event
+            </a>
+            <a
+              href="#"
+              className="text-text-color-3 text-xl leading-9 w-[280px]"
+            >
+              Software
+            </a>
+          </div>
+          <div className="desktop:col-span-1 tablet:col-span-3 col-span-6 flex flex-col">
+            <p className="text-text-color-1 text-2xl font-bold">Pages</p>
+            <a
+              href="#"
+              className="text-text-color-3 text-xl leading-9 w-[280px]"
+            >
+              About Us
+            </a>
+            <a
+              href="#"
+              className="text-text-color-3 text-xl leading-9 w-[280px]"
+            >
+              Careers
+            </a>
+            <a
+              href="#"
+              className="text-text-color-3 text-xl leading-9 w-[280px]"
+            >
+              Case Studies
+            </a>
+            <a
+              href="#"
+              className="text-text-color-3 text-xl leading-9 w-[280px]"
+            >
+              Pricing
+            </a>
+          </div>
+          <div className="desktop:col-span-1 tablet:col-span-3 col-span-6 flex flex-col">
+            <p className="text-text-color-1 text-2xl font-bold">Blog</p>
+            <a
+              href="#"
+              className="text-text-color-3 text-xl leading-9 w-[280px]"
+            >
+              Blog Listing
+            </a>
+            <a
+              href="#"
+              className="text-text-color-3 text-xl leading-9 w-[280px]"
+            >
+              Blog Article
+            </a>
+            <a
+              href="#"
+              className="text-text-color-3 text-xl leading-9 w-[280px]"
+            >
+              Newsroom
+            </a>
+          </div>
+          <div className="desktop:col-span-1 tablet:col-span-3 col-span-6 flex flex-col">
+            <p className="text-text-color-1 text-2xl font-bold">Portfolio</p>
+            <a
+              href="#"
+              className="text-text-color-3 text-xl leading-9 w-[280px]"
+            >
+              Portfolio
+            </a>
+            <a
+              href="#"
+              className="text-text-color-3 text-xl leading-9 w-[280px]"
+            >
+              Single Case
+            </a>
+          </div>
         </div>
-      </div>
-      <div>
-        <p className="text-display-1">Display 1</p>
-      </div>
+        <div className="mt-8">
+          <p className="text-lg text-text-color-3">
+            © 2019-2020 Wave Multipurpose Design Template.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

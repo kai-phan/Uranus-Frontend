@@ -28,6 +28,11 @@ export default {
       'display-2': '60px',
       'display-3': '48px',
     },
+    screens: {
+      'mobile': '425px',
+      'tablet': '768px',
+      'desktop': '1200px',
+    },
     extend: {
       colors: {
         primary: {
@@ -41,6 +46,11 @@ export default {
           2: '#eafaf3',
           3: '#fff2d8',
           4: '#ffe3de',
+        },
+        'text-color':{
+          1: '#333333',
+          2: '#858a8e',
+          3: '#aab0b7'
         }
       },
     },
