@@ -1,6 +1,3 @@
-import avatarImg from 'src/assets/avatar.png';
-import coverImg from 'src/assets/cover-img.png';
-import slideImg from 'src/assets/slide.png';
 import { Button } from 'src/components/common';
 import CompanyReviews from 'src/components/CompanyReviews';
 import Header from 'src/components/Header';
@@ -20,7 +17,11 @@ function App() {
       <div className="px-9 py-16 container m-auto">
         <div className="grid grid-cols-4 gap-4">
           <div className="desktop:col-span-2 col-span-4">
-            <img src={coverImg} alt="cover" className="rounded-md" />
+            <img
+              src="src/assets/cover-img.png"
+              alt="cover"
+              className="rounded-md"
+            />
           </div>
           <div className="desktop:col-span-2 desktop:p-24 col-span-4 flex flex-col justify-center gap-5">
             <p className="text-text-color-1 text-6xl font-bold leading-[73px]">
@@ -54,7 +55,7 @@ function App() {
               great products that will help you in your work.
             </p>
             <div className="mt-4 relative">
-              <img src={slideImg} alt="" className="rounded-md" />
+              <img src="src/assets/slide.png" alt="" className="rounded-md" />
               <div className="absolute inset-0">
                 <div className="h-5/6 relative">
                   <button className="absolute bg-white rounded-full p-3.5 -translate-y-2/4 top-2/4 left-[-20px] hover:opacity-90">
@@ -92,7 +93,11 @@ function App() {
             <div className="grid grid-cols-6 gap-4">
               <div className="desktop:col-span-2 tablet:col-span-3 col-span-6 py-8">
                 <div className="flex flex-col items-center gap-2.5">
-                  <img src={avatarImg} alt="" className="w-[180px]" />
+                  <img
+                    src="src/assets/avatar.png"
+                    alt=""
+                    className="w-[180px]"
+                  />
                   <p className="text-text-color-1 text-xl leading-6 font-semibold">
                     Bogdan Krivenchenko
                   </p>
@@ -114,7 +119,11 @@ function App() {
               </div>
               <div className="desktop:col-span-2 tablet:col-span-3 col-span-6 py-8">
                 <div className="flex flex-col items-center gap-2.5">
-                  <img src={avatarImg} alt="" className="w-[180px]" />
+                  <img
+                    src="src/assets/avatar.png"
+                    alt=""
+                    className="w-[180px]"
+                  />
                   <p className="text-text-color-1 text-xl leading-6 font-semibold">
                     Bogdan Krivenchenko
                   </p>
@@ -136,7 +145,11 @@ function App() {
               </div>
               <div className="desktop:col-span-2 tablet:col-span-3 col-span-6 py-8">
                 <div className="flex flex-col items-center gap-2.5">
-                  <img src={avatarImg} alt="" className="w-[180px]" />
+                  <img
+                    src="src/assets/avatar.png"
+                    alt=""
+                    className="w-[180px]"
+                  />
                   <p className="text-text-color-1 text-xl leading-6 font-semibold">
                     Bogdan Krivenchenko
                   </p>
@@ -158,7 +171,11 @@ function App() {
               </div>
               <div className="desktop:col-span-2 tablet:col-span-3 col-span-6 py-8">
                 <div className="flex flex-col items-center gap-2.5">
-                  <img src={avatarImg} alt="" className="w-[180px]" />
+                  <img
+                    src="src/assets/avatar.png"
+                    alt=""
+                    className="w-[180px]"
+                  />
                   <p className="text-text-color-1 text-xl leading-6 font-semibold">
                     Bogdan Krivenchenko
                   </p>
@@ -180,7 +197,11 @@ function App() {
               </div>
               <div className="desktop:col-span-2 tablet:col-span-3 col-span-6 py-8">
                 <div className="flex flex-col items-center gap-2.5">
-                  <img src={avatarImg} alt="" className="w-[180px]" />
+                  <img
+                    src="src/assets/avatar.png"
+                    alt=""
+                    className="w-[180px]"
+                  />
                   <p className="text-text-color-1 text-xl leading-6 font-semibold">
                     Bogdan Krivenchenko
                   </p>
@@ -202,7 +223,11 @@ function App() {
               </div>
               <div className="desktop:col-span-2 tablet:col-span-3 col-span-6 py-8">
                 <div className="flex flex-col items-center gap-2.5">
-                  <img src={avatarImg} alt="" className="w-[180px]" />
+                  <img
+                    src="src/assets/avatar.png"
+                    alt=""
+                    className="w-[180px]"
+                  />
                   <p className="text-text-color-1 text-xl leading-6 font-semibold">
                     Bogdan Krivenchenko
                   </p>
@@ -362,4 +387,4 @@ function App() {
   );
 }
 
-export default App;
+export const Component = App;

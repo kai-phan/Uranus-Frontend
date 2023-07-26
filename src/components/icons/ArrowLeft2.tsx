@@ -1,9 +1,11 @@
+import { TypeIcon } from './types';
+
 export default function ArrowLeft2({
   classNames,
   width = 16,
   height = 16,
   color = 'none',
-}) {
+}: TypeIcon) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

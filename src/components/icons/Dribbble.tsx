@@ -1,9 +1,11 @@
+import { TypeIcon } from './types';
+
 export default function Dribbble({
   classNames,
   width = 24,
   height = 24,
   color = 'none',
-}) {
+}: TypeIcon) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

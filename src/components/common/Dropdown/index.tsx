@@ -30,8 +30,8 @@ export default function Dropdown({ title, items, link = '#' }: Props) {
         )}
       >
         <ul className="py-2 text-sm text-text-color-2">
-          {items.map((item) => (
-            <li>
+          {items.map((item, index) => (
+            <li key={index}>
               <a href={link} className="block px-4 py-2 hover:bg-black/10">
                 {item}
               </a>

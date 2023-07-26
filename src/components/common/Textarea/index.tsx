@@ -16,8 +16,8 @@ const BASE_INPUT_CLASS =
   '[&_path]:focus-within:fill-primary-1';
 
 export default React.forwardRef<
-  HTMLInputElement,
-  React.InputHTMLAttributes<HTMLInputElement> & Props
+  HTMLTextAreaElement,
+  React.TextareaHTMLAttributes<HTMLTextAreaElement> & Props
 >(function Textarea(props, ref) {
   const { label, placeholder, rows = 1, cols = 20, ...rest } = props;
 

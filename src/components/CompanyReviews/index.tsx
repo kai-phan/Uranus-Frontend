@@ -1,22 +1,19 @@
-import asgardia from '../../assets/logo/asgardia.png';
-import kanba from '../../assets/logo/kanba.png';
-import treva from '../../assets/logo/treva.png';
 import CompanyItem from './CompanyItem';
 
 export default function CompanyReviews() {
   const listCompany = [
     {
-      logo: kanba,
+      logo: '../../assets/logo/asgardia.png',
       description:
         '“The latest project from the Plum Web Studio team exceeded all expectations and will help many people”',
     },
     {
-      logo: asgardia,
+      logo: '../../assets/logo/asgardia.png',
       description:
         '“The latest project from the Plum Web Studio team exceeded all expectations and will help many people”',
     },
     {
-      logo: treva,
+      logo: '../../assets/logo/treva.png',
       description:
         '“The latest project from the Plum Web Studio team exceeded all expectations and will help many people”',
     },

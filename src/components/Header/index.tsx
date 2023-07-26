@@ -9,8 +9,8 @@ export default function Header() {
         <p className="text-text-color-1 text-4xl font-bold">Move</p>
 
         <div className="hidden desktop:flex gap-5 items-center">
-          {ITEM_HEADER.map(({ title, items }) => (
-            <Dropdown title={title} items={items} />
+          {ITEM_HEADER.map(({ title, items }, index) => (
+            <Dropdown key={index} title={title} items={items} />
           ))}
 
           <div>
