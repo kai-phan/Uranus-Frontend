@@ -1,27 +1,43 @@
 import React from 'react';
-import { Link, LoaderFunctionArgs } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import { useQuery } from '@tanstack/react-query';
+
+import { Select } from 'src/components/form';
 
 export type Props = {
   className?: string;
 };
 
 const Index: React.FC<Props> = () => {
+  const { handleSubmit, register } = useForm({
+    defaultValues: {
+      input: 'adf',
+      select: [1],
+      select2: 2,
+    },
+  });
+
   return (
     <React.Fragment>
-      <header>fasfas</header>
-      <Link to={'/about'}>about</Link>
+      <form
+        onSubmit={handleSubmit((data) => {
+          console.log(data);
+        })}
+      >
+        <input type="text" {...register('input')} />
+        <Select {...register('select')} />
+        <select {...register('select2')}>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+
+        <button type="submit">Search</button>
+      </form>
+
+      <br />
+      <hr />
     </React.Fragment>
   );
 };
 
 export const Component = Index;
-
-export function loader(args: LoaderFunctionArgs) {
-  const { params, context, request } = args;
-
-  const searchParams = new URL(request.url).searchParams;
-
-  console.log(searchParams.get('page'), searchParams.get('per'));
-
-  return fetch('https://jsonplaceholder.typicode.com/todos/1');
-}

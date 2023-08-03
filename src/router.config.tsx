@@ -24,6 +24,14 @@ const routers: RouteObject[] = [
           },
         ],
       },
+      {
+        path: 'controlled',
+        lazy: () => import('src/pages/controlled'),
+      },
+      {
+        path: 'todos',
+        lazy: () => import('src/pages/todos'),
+      },
     ],
   },
 ] satisfies RouteObject[];
